@@ -1,5 +1,13 @@
 import React from "react"
+import { graphql } from "gatsby"
+import { Layout, Hero } from "../component"
 
-export default function Home() {
-  return <div>Hello world!</div>
+const index = () => {
+  return (
+    <Layout>
+      <Hero></Hero>
+    </Layout>
+  )
 }
+
+export default index
