@@ -1,11 +1,12 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { Layout, Hero } from "../component"
+//import { graphql } from "gatsby"
+import { Layout, Hero, About } from "../component"
 
 const index = () => {
   return (
     <Layout>
       <Hero></Hero>
+      <About></About>
     </Layout>
   )
 }

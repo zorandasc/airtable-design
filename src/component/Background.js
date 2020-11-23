@@ -1,7 +1,7 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 const query = graphql`
   {
@@ -37,6 +37,16 @@ const Background = ({ children }) => {
   )
 }
 
+const fadeIn=keyframes`
+  from{
+    background-color:rgb(0,0,0,0.8);
+  }
+  to{
+    background-color:rgba(0,0,0,0.4);
+  }
+
+`
+
 const Wrapper = styled.section`
   .bcg {
     /* MUST!!!!!! */
@@ -44,6 +54,7 @@ const Wrapper = styled.section`
     margin-top: -5rem;
     display: grid;
     place-items: center;
+    animation:${fadeIn} 2s ease-in-out 1 forwards;
   }
 `
 

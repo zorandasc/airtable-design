@@ -1,4 +1,4 @@
 import Layout from "./Layout"
 import Hero from "./Hero"
-
-export { Layout, Hero }
+import About from "./About"
+export { Layout, Hero, About }
