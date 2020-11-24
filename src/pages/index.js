@@ -8,10 +8,10 @@ const index = ({ data }) => {
   } = data
   return (
     <Layout>
-      <Hero></Hero>
+      <Hero projects={projects}></Hero>
       <About></About>
       <Projects projects={projects} title="latest projects"></Projects>
-    <Slider></Slider>
+      <Slider></Slider>
     </Layout>
   )
 }

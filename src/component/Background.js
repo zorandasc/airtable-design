@@ -16,7 +16,7 @@ const query = graphql`
   }
 `
 
-const Background = ({ children }) => {
+const Background = ({ children, image }) => {
   const {
     file: {
       childImageSharp: { fluid },
@@ -27,7 +27,7 @@ const Background = ({ children }) => {
     <Wrapper>
       <BackgroundImage
         Tag="div"
-        fluid={fluid}
+        fluid={image || fluid}
         className="bcg"
         preserveStackingContext={true}
       >
@@ -37,7 +37,7 @@ const Background = ({ children }) => {
   )
 }
 
-const fadeIn=keyframes`
+const fadeIn = keyframes`
   from{
     background-color:rgb(0,0,0,0.8);
   }
@@ -54,7 +54,7 @@ const Wrapper = styled.section`
     margin-top: -5rem;
     display: grid;
     place-items: center;
-    animation:${fadeIn} 2s ease-in-out 1 forwards;
+    animation: ${fadeIn} 2s ease-in-out 1 forwards;
   }
 `
 
