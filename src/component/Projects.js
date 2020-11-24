@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 import Title from "./Title"
 
 const Projects = ({ projects: data, title, page }) => {
-  const [projects, setProjects] = React.useState(data)
+  const [projects] = React.useState(data)
   return (
     <Wrapper className="section">
       <Title title={title || "projects"}></Title>
