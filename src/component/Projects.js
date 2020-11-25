@@ -4,12 +4,19 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 
 import Title from "./Title"
+import SearchButtons from "./SearchButtons"
 
 const Projects = ({ projects: data, title, page }) => {
-  const [projects] = React.useState(data)
+  const [projects, setProjects] = React.useState(data)
+
+  const setBackToAll=()=>{
+    setProjects(data)
+  }
+
   return (
     <Wrapper className="section">
       <Title title={title || "projects"}></Title>
+      {page && <SearchButtons projects={data} setProjects={setProjects} setBackToAll={setBackToAll}></SearchButtons>}
       <div className="section-center">
         {projects.map(item => {
           const { id } = item
