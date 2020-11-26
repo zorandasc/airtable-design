@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 import {
   InstantSearch,
   SearchBox,
-  Hits,
+  //Hits,
   connectHits,
 } from "react-instantsearch-dom"
 
